@@ -35,3 +35,8 @@ jobs:
 
       # run tests!
       - run: yarn chromatic test --app-code=fhtgagzwbo --exit-zero-on-changes
+      - run: |
+          if [ $CIRCLE_BRANCH = "master" ]
+          then
+            yarn release
+          fi
