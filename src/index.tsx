@@ -1,5 +1,2 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { App }from './components/app';
-
-render(<App/>, document.getElementById('root'));
+export { Button } from './components/button'
+export { theme } from './theme'
