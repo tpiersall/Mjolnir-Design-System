@@ -1,6 +1,6 @@
 {
   "name": "mjolnir-design-system",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
   "dependencies": {
     "framer-motion": "^1.6.17",
