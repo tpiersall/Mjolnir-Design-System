@@ -68,7 +68,7 @@
     "typescript": "^3.7.2"
   },
   "description": "A design system to unify worthy products",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "repository": "https://github.com/tpiersall/Mjolnir-Design-System.git",
   "author": "toddpiersall <tpiersall@buxtonco.com>",
   "license": "MIT"
