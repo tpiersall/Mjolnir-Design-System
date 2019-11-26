@@ -88,7 +88,7 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
                 },
             },
             secondary: {
-                color: 'primary',
+                color: 'reds.0',
                 bg: 'secondary',
                 borderColor: 'primary',
                 '&:hover': {
