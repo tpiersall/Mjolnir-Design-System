@@ -34,7 +34,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn chromatic test --app-code=fhtgagzwbo --exit-zero-on-changes
+      - run: yarn chromatic test -a fhtgagzwbo --exit-zero-onchanges
       - run: |
           if [ $CIRCLE_BRANCH = "master" ]
           then
