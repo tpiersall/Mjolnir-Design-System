@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "BABEL_ENV=production babel src -d dist --extensions '.ts,.tsx'",
+    "build": "BABEL_ENV=production babel src -d dist --extensions '.ts,.tsx',.otf",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
