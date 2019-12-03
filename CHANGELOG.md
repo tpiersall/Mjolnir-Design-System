@@ -1,3 +1,15 @@
+# v0.1.31 (Tue Dec 03 2019)
+
+#### ⚠️  Pushed to master
+
+- added grid, flex, code, table components  (tpiersall@buxtonco.com)
+
+#### Authors: 1
+
+- toddpiersall (tpiersall@buxtonco.com)
+
+---
+
 # v0.1.1 (Wed Nov 27 2019)
 
 #### ⚠️  Pushed to master
