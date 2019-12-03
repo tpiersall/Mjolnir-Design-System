@@ -8,7 +8,7 @@ import { space, variant, color, typography, border } from 'styled-system'
 export interface ButtonProps {
     /** button size */
     size?: string
-    children: any
+    children?: React.ReactNode
     kind?: string
     padding?: number
     bg?: string
@@ -30,12 +30,9 @@ export const Button: FC<ButtonProps> = (props) => {
 
         <ButtonWrapper
             onClick={props.onClick}
-            padding={3}
-            whileTap={{ scale: 0.95 }}
+            padding={4}
             bg='grays.5'
-            fontSize={1}
-            border='1px solid'
-            borderColor='grays.3'
+            fontSize={2}
             kind={props.kind}
             size={props.size}
             m={props.m}
@@ -69,11 +66,11 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
         outline: 'none',
         position: 'relative',
         fontFamily: 'inherit',
-        borderRadius: '4px',
+        border: 'none',
         cursor: 'pointer',
-        fontSize: '14px',
+        fontSize: '12px',
         fontWeight: 500,
-        transition: '.1s'
+        transition: '.2s'
     },
     variant({
         prop: 'kind',
@@ -84,15 +81,16 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
                 bg: 'primary',
                 borderColor: 'primary',
                 '&:hover': {
-                    bg: 'primary',
+                    bg: 'primary10',
+                    color: '#fff'
                 },
             },
             secondary: {
                 color: 'primary',
-                bg: 'secondary',
-                borderColor: 'primary',
+                bg: 'white',
                 '&:hover': {
                     color: 'primary',
+                    borderColor: 'primary10',
                 },
             },
             warning: {
@@ -115,7 +113,7 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
                 pr: 3,
                 pt: 1,
                 pb: 1,
-                fontSize: 2
+                fontSize: 0
             },
             large: {
                 pl: 7,

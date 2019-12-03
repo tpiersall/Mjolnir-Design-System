@@ -1,21 +1,25 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from './theme'
+import css from '@styled-system/css';
+import { fontStyles } from './fonts';
 
-const GlobalStyle = createGlobalStyle`
- 
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|PT+Mono&display=swap');
-  * {
-    box-sizing: border-box;
-    ::selection {
-      background: ${theme.colors.primary};
-      color: ${theme.colors.white};
-    }
+const GlobalStyle = createGlobalStyle(
+  css({
+    '*': {
+      boxSizing: 'border-box',
+    },
+    html: {
+      fontSize: 3,
+      fontFamily: 'normal',
+      color: 'gray800',
+      backgroundColor: 'white',
+      WebkitFontSmoothing: 'antialiased',
+      MozOsxFontSmoothing: 'grayscale',
+      textRendering: 'optimizeLegibility',
+    },
+  }),
+  fontStyles
+)
 
-  }
-  body {
-    font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
-    font-weight: 500; 
-  }
-`;
+
 
 export default GlobalStyle;

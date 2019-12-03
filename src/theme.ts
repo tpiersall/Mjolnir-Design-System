@@ -1,20 +1,48 @@
-
 export const theme = {
-    textStyles: {
-        heading1: {
-            fontSize: ['32px', '42px', '52px'],
-            color: '#000',
-            fontWeight: 800,
-        },
-        textStyle1: {
-            fontSize: '16px',
-            color: '#000',
-            fontWeight: 400,
-            lineHeight: '1.4',
-        },
+    fonts: {
+        normal: 'Graphik, -apple-system, BlinkMacSystemFont, "Helvetica Neue", helvetica, arial, sans-serif',
+        mono: 'Inconsolata, monospace;'
     },
+    fontSizes: [
+        '12px',
+        '14px',
+        '16px',
+        '20px',
+        '28px',
+        '32px',
+        '42px',
+        '54px',
+        '128px',
+    ],
+
     colors: {
-        primary: '#3366FF',
+
+        primary: '#000000',
+        primary5: '#292929',
+        primary10: '#525252',
+
+        Accent0: '#E8F7EF',
+        Accent5: '#BCF5D6',
+        Accent10: '#90F3BD',
+        Accent20: '#41EB8D',
+        Accent30: '#07DD66',
+        Accent40: '#00C858',
+        Accent50: '#00AA49',
+        Accent60: '#008338',
+        Accent70: '#005925',
+
+        Mono0: '#FFFFFF',
+        Mono5: '#FCFCFC',
+        Mono10: '#F8F8F8',
+        Mono20: '#EBEBEB',
+        Mono30: '#D4D4D4',
+        Mono40: '#B2B2B2',
+        Mono50: '#828282',
+        Mono60: '#444444',
+        Mono70: '#000000',
+
+
+
         secondary: '#F2F8FF',
         lightGray: '#ececec',
         purple: '#744c9d',
@@ -32,20 +60,6 @@ export const theme = {
             '#EC3435'
         ]
     },
-    fontSizes: [
-        '9px',
-        '11px',
-        '13px',
-        '15px',
-        '17px',
-        '19px',
-        '21px',
-        '23px',
-        '27px',
-        '35px',
-        '58px',
-        '128px',
-    ],
     lineHeights: ['20px', '25px', '30px', '35px', '40px', '45px', '50px', '55px', '60px'],
     space: [
         "2px",
@@ -63,11 +77,6 @@ export const theme = {
         "32px",
         "40px",
         "48px",
-        "56px",
-        "64px",
-        "96px",
-        "128px",
-        "192px"
     ],
     input: {
         color: {
