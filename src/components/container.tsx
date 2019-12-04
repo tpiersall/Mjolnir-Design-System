@@ -9,7 +9,7 @@ interface ContainerProps {
     as?: any;
 }
 
-export const Contaner: FC<ContainerProps> = (props) => {
+export const Container: FC<ContainerProps> = (props) => {
     return (
         <BaseContainer {...props} size={props.size}>{props.children}</BaseContainer>
     )
