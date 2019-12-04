@@ -1,9 +1,14 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { space, color, layout, flexbox, typography, border } from 'styled-system'
+import { space, color, layout, flexbox, typography, border, position } from 'styled-system'
 
 export interface BoxProps {
     children?: ReactNode
+    position?: string
+    top?: number
+    left?: number
+    right?: number
+    bottom?: number
     backgroundColor?: string
     bg?: string
     p?: string | number
@@ -45,6 +50,7 @@ export const Box: React.FC<BoxProps> = (props) => {
 }
 
 const BoxWrapper = styled.div(
+    position,
     space,
     color,
     layout,

@@ -16,6 +16,9 @@ const GlobalStyle = createGlobalStyle(
       MozOsxFontSmoothing: 'grayscale',
       textRendering: 'optimizeLegibility',
     },
+    body: {
+      margin: 0,
+    },
   }),
   fontStyles
 )
