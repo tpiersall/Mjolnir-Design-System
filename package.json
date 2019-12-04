@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "BABEL_ENV=production babel src -d dist --extensions '.ts,.tsx',.otf",
+    "build": "rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
@@ -62,7 +62,11 @@
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.0",
     "@types/styled-system": "^5.1.4",
+    "babel-loader": "8.0.6",
     "@types/styled-system__css": "^5.0.4",
+    "rollup": "^1.19.4",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "rollup-plugin-url": "^2.2.2",
     "auto": "^7.16.3",
     "prettier": "^1.19.1",
     "react-docgen-typescript-loader": "^3.6.0",
@@ -72,6 +76,10 @@
   },
   "description": "A design system to unify worthy products",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/tpiersall/Mjolnir-Design-System.git",
   "author": "toddpiersall <tpiersall@buxtonco.com>",
   "license": "MIT"
