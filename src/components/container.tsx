@@ -17,6 +17,8 @@ export const Container: FC<ContainerProps> = (props) => {
 
 const BaseContainer = styled(`section`)<ContainerProps>(
     css({
+        marginLeft: 'auto',
+        marginRight: 'auto',
         flex: 1,
         paddingX: 5,
     }),
@@ -24,7 +26,7 @@ const BaseContainer = styled(`section`)<ContainerProps>(
         prop: 'size',
         variants: {
             small: {
-                maxWitdh: '25rem'
+                maxWidth: '25rem'
             },
             medium: {
                 maxWidth: '45rem'
