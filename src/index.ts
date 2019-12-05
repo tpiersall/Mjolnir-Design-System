@@ -7,6 +7,7 @@ export { Flex } from './components/flex'
 export { Grid } from './components/grid'
 export { Heading } from './components/heading'
 export { Container } from './components/container'
+export { Menu, MenuItem } from './components/menu'
 export { Table, Thead, Tbody, Tfoot, Tr, Th, Td } from './components/table'
 export { Text } from './components/text'
 
