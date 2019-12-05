@@ -9,7 +9,9 @@ export interface MenuProps {
 
 export const Menu = styled('ul')<MenuProps>(
     css({
-        outline: 'none'
+        outline: 'none',
+        margin: '0px',
+        padding: '0px'
     }),
     {}
 )
