@@ -17,8 +17,8 @@ const GlobalStyle = createGlobalStyle(
       textRendering: 'optimizeLegibility',
     },
     body: {
-      margin: 0,
-      padding: 0,
+      margin: '0px',
+      padding: '0px'
     },
   }),
   fontStyles
