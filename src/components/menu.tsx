@@ -26,8 +26,7 @@ const menuItemStyleProps = compose(
     color
 )
 
-export const MenuItem = styled('a')<MenuItemProps>(
-    color,
+export const MenuItem = styled('button')<MenuItemProps>(
     css({
         outline: 'none',
         cursor: 'pointer',
