@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import css from '@styled-system/css'
-import { variant, space, layout } from 'styled-system'
+import { variant, space, layout, compose } from 'styled-system'
 import styled from 'styled-components'
 
 export interface MenuProps {
@@ -21,8 +21,10 @@ export interface MenuItemProps {
 }
 
 export const MenuItem = styled('button')<MenuItemProps>(
-    space,
-    layout,
+    compose(
+        space,
+        layout,
+    ),
     css({
         outline: 'none',
         cursor: 'pointer',
