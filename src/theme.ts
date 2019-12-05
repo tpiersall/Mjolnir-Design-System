@@ -77,6 +77,7 @@ export const theme = {
         "32px",
         "40px",
         "48px",
+        "104px"
     ],
     input: {
         color: {

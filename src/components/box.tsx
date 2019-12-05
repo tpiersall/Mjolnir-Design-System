@@ -13,6 +13,7 @@ export interface BoxProps {
     bg?: string
     p?: string | number
     border?: string
+    borderRight?: string
     borderColor?: string
     borderRadius?: string | number
     boxShadow?: string
