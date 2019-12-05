@@ -24,10 +24,17 @@ export const MenuItem = styled('button')<MenuItemProps>(
     css({
         outline: 'none',
         cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        border: 0,
+        userSelect: 'none',
+        width: '100%',
         textDecoration: 'none',
+        position: 'relative',
+        textAlign: 'left',
         appearance: 'none',
         listStyleType: 'none',
-        paddingX: 2,
+        paddingX: 3,
         paddingY: 1,
     }),
     variant({
