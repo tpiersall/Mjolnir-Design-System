@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import css from '@styled-system/css'
-import { variant, space, layout, compose } from 'styled-system'
+import { variant, space, layout, compose, color } from 'styled-system'
 import styled from 'styled-components'
 
 export interface MenuProps {
@@ -20,11 +20,14 @@ export interface MenuItemProps {
     variant?: string
 }
 
-export const MenuItem = styled('button')<MenuItemProps>(
-    compose(
-        space,
-        layout,
-    ),
+const menuItemStyleProps = compose(
+    space,
+    layout,
+    color
+)
+
+export const MenuItem = styled('a')<MenuItemProps>(
+    color,
     css({
         outline: 'none',
         cursor: 'pointer',
@@ -49,8 +52,19 @@ export const MenuItem = styled('button')<MenuItemProps>(
                     color: 'Primary'
                 }
             },
+            active: {
+                ':hover': {
+                    backgroundColor: 'Accent50',
+                    color: '#fff'
+                },
+                ':active': {
+                    backgroundColor: 'Accent50',
+                    color: '#fff'
+                }
+            },
         }
-    })
+    }),
+    menuItemStyleProps
 
 )
 

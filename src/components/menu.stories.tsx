@@ -15,9 +15,8 @@ export default {
 export const menu = () => (
     <>
         <Menu>
-            <MenuItem><Text size={0}>Menu Item One</Text></MenuItem>
-            <MenuItem><Text size={0}>Menu Item Two</Text></MenuItem>
-            <MenuItem><Text size={0}>Menu Item Three</Text></MenuItem>
+            <MenuItem variant="normal" px={5} minHeight={12}><Text as="span" size={0}>Menu Item One</Text></MenuItem>
+            <MenuItem variant="active" px={5} minHeight={12}><Text size={0} as="span" >Menu Item One</Text></MenuItem>
         </Menu>
     </>
 );
