@@ -7,7 +7,7 @@ export interface MenuProps {
 
 }
 
-export const Menu = styled('ul')<MenuProps>(
+export const Menu = styled('nav')<MenuProps>(
     css({
         outline: 'none',
         margin: '0px',
@@ -20,7 +20,7 @@ export interface MenuItemProps {
     variant?: string
 }
 
-export const MenuItem = styled('li')<MenuItemProps>(
+export const MenuItem = styled('button')<MenuItemProps>(
     css({
         outline: 'none',
         cursor: 'pointer',
