@@ -65,7 +65,6 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
     {
         outline: 'none',
         position: 'relative',
-        fontFamily: 'inherit',
         border: 'none',
         cursor: 'pointer',
         fontSize: '12px',

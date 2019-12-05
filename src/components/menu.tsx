@@ -64,7 +64,6 @@ export const MenuItem = styled('button')<MenuItemProps>(
         }
     }),
     menuItemStyleProps
-
 )
 
 MenuItem.defaultProps = { variant: 'normal' }
