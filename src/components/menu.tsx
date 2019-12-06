@@ -1,11 +1,23 @@
-import React, { FC } from 'react'
 import css from '@styled-system/css'
 import { variant, space, layout, compose, color } from 'styled-system'
 import styled from 'styled-components'
 
 export interface MenuProps {
-
+    px?: number | string
+    py?: number | string
+    my?: number | string
+    mx?: number | string
+    mt?: number | string
+    ml?: number | string
+    mr?: number | string
+    mb?: number | string
 }
+
+const menuStyleProps = compose(
+    space,
+    layout,
+    color
+)
 
 export const Menu = styled('nav')<MenuProps>(
     css({
@@ -13,11 +25,16 @@ export const Menu = styled('nav')<MenuProps>(
         margin: '0px',
         padding: '0px'
     }),
-    {}
+    menuStyleProps
 )
 
 export interface MenuItemProps {
     variant?: string
+    px?: number | string
+    py?: number | string
+    my?: number | string
+    mx?: number | string
+    minHeight?: number | string
 }
 
 const menuItemStyleProps = compose(

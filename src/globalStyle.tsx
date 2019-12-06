@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle(
     html: {
       fontSize: 3,
       fontFamily: 'normal',
-      color: 'mono80',
-      backgroundColor: 'white',
+      color: 'Mono80',
+      // backgroundColor: 'white',
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
       textRendering: 'optimizeLegibility',

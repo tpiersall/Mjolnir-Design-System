@@ -16,6 +16,9 @@ export interface HeadingProps {
     ml?: number | string
     mr?: number | string
     m?: number | string
+    my?: number | string
+    mx?: number | string
+
 
 }
 
@@ -23,15 +26,6 @@ export const Heading: React.FC<HeadingProps> = (props) => (
 
     <HeadingWrapper
         {...props}
-        size={props.size}
-        as={props.as}
-        fontSize={props.fontSize}
-        truncate={props.truncate}
-        m={props.m}
-        mt={props.mt}
-        mb={props.mb}
-        ml={props.ml}
-        mr={props.mr}
     />
 )
 

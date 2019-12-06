@@ -4,7 +4,7 @@ import { variant, styles } from 'styled-system'
 import styled from 'styled-components'
 
 
-interface CodeProps {
+export interface CodeProps {
     children: React.ReactNode
     kind?: "normal" | "fade"
 }
