@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import css from '@styled-system/css'
 import { motion } from 'framer-motion'
 import { space, variant, color, typography, border } from 'styled-system'
 
@@ -32,7 +33,6 @@ export const Button: FC<ButtonProps> = (props) => {
             onClick={props.onClick}
             padding={4}
             bg='grays.5'
-            fontSize={2}
             kind={props.kind}
             size={props.size}
             m={props.m}
@@ -62,15 +62,16 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
     color,
     typography,
     border,
-    {
+    css({
         outline: 'none',
         position: 'relative',
         border: 'none',
         cursor: 'pointer',
-        fontSize: '12px',
+        borderRadius: '4px',
+        fontSize: 0,
         fontWeight: 500,
         transition: '.2s'
-    },
+    }),
     variant({
         prop: 'kind',
         scale: 'buttons',

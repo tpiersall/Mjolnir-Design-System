@@ -42,6 +42,18 @@ export const theme = {
         Mono70: '#000000',
 
 
+        Red0: "#fff2f3",
+        Red5: "#fdcacd",
+        Red10: "#faa2a8",
+        Red20: "#f05b65",
+        Red30: "#e12632",
+        Red40: "#c80411",
+        Red50: "#a6000b",
+        Red60: "#7a0008",
+        Red70: "#4a0005",
+
+
+
 
         secondary: '#F2F8FF',
         lightGray: '#ececec',

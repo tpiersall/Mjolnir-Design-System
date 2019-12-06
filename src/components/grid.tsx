@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { grid } from 'styled-system'
+import { grid, space } from 'styled-system'
 import styled from 'styled-components'
 
 export interface GridProps {
@@ -31,6 +31,7 @@ export const Grid: FC<GridProps> = (props) => {
 
 const GridWrapper = styled('div')<GridProps>(
     grid,
+    space,
     {
         display: 'grid'
     }

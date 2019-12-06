@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { flexbox } from 'styled-system'
+import { flexbox, layout, space } from 'styled-system'
 import styled from 'styled-components'
 
 export interface FlexProps {
@@ -29,6 +29,8 @@ export const Flex: FC<FlexProps> = (props) => {
 
 const FlexWrapper = styled('div')<FlexProps>(
     flexbox,
+    layout,
+    space,
     {
         display: 'flex'
     }
