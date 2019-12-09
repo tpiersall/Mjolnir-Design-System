@@ -20,6 +20,12 @@ const GlobalStyle = createGlobalStyle(
       margin: '0px',
       padding: '0px'
     },
+    h1: {
+      margin: 0
+    },
+    p: {
+      margin: 0
+    },
   }),
   fontStyles
 )

@@ -5,34 +5,25 @@ import styled from 'styled-components'
 
 
 export interface HeadingProps {
-
     size?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
     as?: any
     fontSize?: number
-    fontWeight?: 400 | 500 | 700
+    fontWeight?: 500 | 700
+    children?: React.ReactNode;
     truncate?: boolean
-    mb?: number | string
-    mt?: number | string
-    ml?: number | string
-    mr?: number | string
-    m?: number | string
-    my?: number | string
-    mx?: number | string
-
-
 }
 
-export const Heading: React.FC<HeadingProps> = (props) => (
+export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>((props, ref) => (
 
     <HeadingWrapper
         {...props}
+        ref={ref}
+        as={props.as}
     />
-)
+))
 
-const HeadingWrapper = styled('div')(
+const HeadingWrapper = styled('div')<HeadingProps>(
     space,
-    fontSize,
-    fontWeight,
     typography,
     color,
     lineHeight,
@@ -46,34 +37,32 @@ const HeadingWrapper = styled('div')(
         variants: {
             0: {
                 fontSize: 1,
+                lineHeight: 2
             },
             1: {
                 fontSize: 2,
+                lineHeight: 2
             },
             2: {
                 fontSize: 3,
+                lineHeight: 2
             },
             3: {
                 fontSize: 4,
+                lineHeight: 3
             },
             4: {
                 fontSize: 5,
+                lineHeight: 4
             },
             5: {
                 fontSize: 6,
+                lineHeight: 5
             },
             6: {
                 fontSize: 7,
-            },
-            7: {
-                fontSize: 8,
-            },
-            8: {
-                fontSize: 9,
-            },
-            9: {
-                fontSize: 10,
-            },
+                lineHeight: 6
+            }
         }
     }),
     variant({
@@ -87,3 +76,8 @@ const HeadingWrapper = styled('div')(
         }
     }),
 )
+
+Heading.defaultProps = {
+    as: "h1",
+    fontWeight: 500
+}

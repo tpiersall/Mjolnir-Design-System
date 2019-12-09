@@ -10,13 +10,11 @@ export default {
     decorators: [withInfo]
 };
 
-export const tags = () => (
+export const headings = () => (
     <>
-        <Heading size={7} fontWeight={700}>The spectacle before us was indeed sublime.</Heading>
         <Heading size={6}>The spectacle before us was indeed sublime.</Heading>
         <Heading size={5}>The spectacle before us was indeed sublime.</Heading>
         <Heading size={4}>The spectacle before us was indeed sublime.</Heading>
-        <Heading size={3}>The spectacle before us was indeed sublime.</Heading>
         <Heading size={3}>The spectacle before us was indeed sublime.</Heading>
         <Heading size={2}>The spectacle before us was indeed sublime.</Heading>
         <Heading size={1}>The spectacle before us was indeed sublime.</Heading>

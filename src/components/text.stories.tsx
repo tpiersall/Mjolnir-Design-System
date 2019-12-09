@@ -10,8 +10,11 @@ export default {
     decorators: [withInfo]
 };
 
-export const tags = () => (
+export const text = () => (
     <>
-        <Text size={6}>The spectacle before us was indeed sublime.</Text>
+        <Text as="p" size={0}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+        <Text as="p" size={1}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+        <Text as="p" size={2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+        <Text as="p" size={3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
     </>
 );

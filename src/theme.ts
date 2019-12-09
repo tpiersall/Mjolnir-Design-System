@@ -52,9 +52,6 @@ export const theme = {
         Red60: "#7a0008",
         Red70: "#4a0005",
 
-
-
-
         secondary: '#F2F8FF',
         lightGray: '#ececec',
         purple: '#744c9d',
@@ -72,7 +69,7 @@ export const theme = {
             '#EC3435'
         ]
     },
-    lineHeights: ['20px', '25px', '30px', '35px', '40px', '45px', '50px', '55px', '60px'],
+    lineHeights: ['18px', '22px', '30px', '36px', '40px', '50px', '64px'],
     space: [
         "2px",
         "4px",
