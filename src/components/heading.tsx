@@ -28,7 +28,6 @@ const HeadingWrapper = styled('div')<HeadingProps>(
     color,
     lineHeight,
     css({
-        color: 'black',
         fontSize: 'inherit',
         lineHeight: 1.2,
     }),
