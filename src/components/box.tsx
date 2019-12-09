@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { space, color, layout, flexbox, typography, border, position } from 'styled-system'
+import { space, color, layout, flexbox, typography, border, position, background } from 'styled-system'
+import { motion } from 'framer-motion'
 
 export interface BoxProps {
     children?: ReactNode
@@ -41,6 +42,12 @@ export interface BoxProps {
     justifySelf?: string
     alignSelf?: string
     order?: string
+    animate?: object
+    transition?: object
+    backgroundImage?: string
+    backgroundSize?: string
+    backgroundPosition?: string
+    backgroundRepeat?: string
 
 }
 
@@ -50,8 +57,9 @@ export const Box: React.FC<BoxProps> = (props) => {
     )
 }
 
-const BoxWrapper = styled.div(
+const BoxWrapper = styled(motion.div)<BoxProps>(
     position,
+    background,
     space,
     color,
     layout,
