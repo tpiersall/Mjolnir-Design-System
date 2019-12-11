@@ -8,6 +8,7 @@ export interface HeadingProps {
     size?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
     as?: any
     fontSize?: number
+    color?: string
     fontWeight?: 500 | 700
     children?: React.ReactNode;
     truncate?: boolean

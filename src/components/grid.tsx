@@ -12,7 +12,7 @@ export interface GridProps {
     gridRow?: number | string
     gridArea?: number
     gridAutoFlow?: number
-    gridAutoRows?: number
+    gridAutoRows?: string
     gridAutoColumns?: string
     gridTemplateRows?: string
     gridTemplateAreas?: number

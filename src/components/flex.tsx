@@ -17,6 +17,8 @@ export interface FlexProps {
     justifySelf?: "center" | "start" | "end" | "flex-start" | "flex-end" | "right" | "left" | "space-between" | "space-evenly" | "stretch"
     alignSelf?: "center" | "start" | "end" | "flex-start" | "flex-end" | "right" | "left" | "space-between" | "space-evenly" | "stretch"
     order?: number
+    height?: string | number
+    mx?: string
 
 }
 

@@ -11,6 +11,16 @@ export interface TextProps {
     fontWeight?: 400 | 500
     truncate?: boolean
     color?: string
+    m?: string | number
+    mt?: string | number
+    mb?: string | number
+    ml?: string | number
+    mr?: string | number
+    p?: string | number
+    pt?: string | number
+    pb?: string | number
+    pl?: string | number
+    pr?: string | number
 }
 
 export const Text: React.FC<TextProps> = (props) => (
@@ -32,8 +42,7 @@ const TextWrapper = styled('div')<TextProps>(
     css({
         fontSize: 'inherit',
         fontFamily: 'normal',
-        lineHeight: 1.4,
-        opacity: 0.7
+        lineHeight: 1.4
     }),
     variant({
         prop: 'size',

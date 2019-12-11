@@ -12,8 +12,26 @@ export default {
     decorators: [withInfo]
 };
 
+
+
 export const grid = () => (
     <>
-        <Grid gridTemplateColumns="repeat(4, 1fr)" gridGap={2}><Box bg="Accent40" p={14} /><Box bg="Accent50" p={14} /></Grid>
+        <Grid gridTemplateColumns="repeat(4, 1fr)" gridGap={2}>
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+            <Box bg="primary" p={14} /><Box bg="primary" p={14} />
+        </Grid>
     </>
 );

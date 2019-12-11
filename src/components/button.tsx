@@ -16,11 +16,20 @@ export interface ButtonProps {
     fontSize?: number
     borderColor?: string
     border?: string
-    m?: number | string
     fullWidth?: boolean
     startEnhancer?: any
     endEnhancer?: any
     onClick?: any
+    m?: string | number
+    mt?: string | number
+    mb?: string | number
+    ml?: string | number
+    mr?: string | number
+    p?: string | number
+    pt?: string | number
+    pb?: string | number
+    pl?: string | number
+    pr?: string | number
 }
 
 
@@ -30,6 +39,7 @@ export const Button: FC<ButtonProps> = (props) => {
     return (
 
         <ButtonWrapper
+            {...props}
             onClick={props.onClick}
             padding={4}
             bg='grays.5'
@@ -42,11 +52,11 @@ export const Button: FC<ButtonProps> = (props) => {
         >
             <>
                 {props.startEnhancer && (
-                    <span>←</span>
+                    <StartEnhancerSpan>{props.startEnhancer}</StartEnhancerSpan>
                 )}
                 {props.children}
                 {props.endEnhancer && (
-                    <span>→</span>
+                    <EndEnhancerSpan>{props.endEnhancer}</EndEnhancerSpan>
                 )}
             </>
 
@@ -64,13 +74,19 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
     border,
     css({
         outline: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         position: 'relative',
-        border: 'none',
+        border: '2px solid transparent',
         cursor: 'pointer',
         borderRadius: '4px',
-        fontSize: 0,
-        fontWeight: 500,
-        transition: '.2s'
+        fontSize: '12px',
+        letterSpacing: 1,
+        fontWeight: 700,
+        textTransform: 'uppercase',
+        transition: '.2s',
+
     }),
     variant({
         prop: 'kind',
@@ -79,7 +95,6 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
             primary: {
                 color: 'white',
                 bg: 'primary',
-                borderColor: 'primary',
                 '&:hover': {
                     bg: 'primary10',
                     color: '#fff'
@@ -88,9 +103,12 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
             secondary: {
                 color: 'primary',
                 bg: 'white',
+                borderColor: 'Mono30',
+                borderWidth: '1px',
                 '&:hover': {
+                    border: '1px solid',
                     color: 'primary',
-                    borderColor: 'primary10',
+                    borderColor: 'Mono40',
                 },
             },
             warning: {
@@ -120,7 +138,7 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
                 pr: 7,
                 pt: 6,
                 pb: 6,
-                fontSize: 4
+                fontSize: 2
             }
         }
     }),
@@ -131,5 +149,44 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
                 width: '100%',
             },
         }
+    }),
+    variant({
+        prop: 'circle',
+        variants: {
+            true: {
+                borderRadius: '50%',
+            },
+        }
+    }),
+    variant({
+        prop: 'shapeSize',
+        variants: {
+            small: {
+                height: '24px',
+                width: '24px'
+            },
+            medium: {
+                height: '32px',
+                width: '32px'
+            },
+            large: {
+                height: '56px',
+                width: '56px'
+            },
+        }
     })
 )
+
+Button.defaultProps = {
+    kind: 'primary'
+}
+
+const StartEnhancerSpan = styled.span`
+    display: flex;
+    margin-right: 4px;
+`
+
+const EndEnhancerSpan = styled.span`
+    display: flex;
+    margin-left: 4px;
+`

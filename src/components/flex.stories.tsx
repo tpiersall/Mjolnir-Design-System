@@ -13,7 +13,9 @@ export default {
 };
 
 export const flex = () => (
-    <>
-        <Flex flexDirection="column" alignItems="flex-start"><Box bg="Accent40" width="100%" p={14} /><Box bg="Accent50" width="100%" p={10} /></Flex>
-    </>
+    <Flex>
+        <Box flex="1" height={35} bg="primary" />
+        <Box flex="1" height={35} bg="primary" mx={6} />
+        <Box flex="1" height={35} bg="primary" />
+    </Flex>
 );

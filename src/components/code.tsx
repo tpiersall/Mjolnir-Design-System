@@ -18,7 +18,7 @@ export const Code: FC<CodeProps> = (props) => {
 
 const CodeBase = styled('span')<CodeProps>(
     css({
-        fontWeight: 500,
+        fontWeight: 600,
         fontFamily: 'mono',
         fontSize: 1,
         lineHeight: "20px",
@@ -29,8 +29,12 @@ const CodeBase = styled('span')<CodeProps>(
         prop: 'kind',
         variants: {
             normal: {
-                color: 'Accent70',
-                bg: 'Accent5',
+                color: 'primary',
+                bg: '#fff',
+                boxShadow: '0 3px 4px 0 #EBEBEB',
+                border: '1px solid',
+                borderColor: 'Mono20',
+                borderRadius: '2px'
             },
             fade: {
                 color: 'primary',
@@ -39,6 +43,5 @@ const CodeBase = styled('span')<CodeProps>(
         }
     }),
 )
-
 
 

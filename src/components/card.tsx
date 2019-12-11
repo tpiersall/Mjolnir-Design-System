@@ -1,37 +1,54 @@
 import React, { FC } from 'react'
-import { variant, space, layout, color } from 'styled-system'
+import { variant, space, layout, color, border } from 'styled-system'
+import css from '@styled-system/css'
 import styled from 'styled-components'
 import { Box } from './box'
+import { BoxProps } from './box'
 
-interface CardProps {
+export interface CardProps {
     children?: React.ReactNode
     kind?: string
     width?: string | number
     bg?: string
+    as?: any
+    href?: string
+    gridColumn?: string
+    gridRow?: string
 }
 
-export const Card: FC<CardProps> = (props) => {
-    return (
-        <BaseCard {...props} kind={props.kind} width={props.width} bg={props.bg}>{props.children}</BaseCard>
-    )
+type SharedProps = CardProps & BoxProps
 
+const Props: SharedProps = {
+    children: null as React.ReactNode,
+    backgroundImage: "www.google.com"
+}
+
+export const Card: FC<SharedProps> = (props) => {
+    return (
+        <BaseCard {...props} as={props.as} href={props.href} kind={props.kind} width={props.width} bg={props.bg}>{props.children}</BaseCard>
+    )
 }
 
 const BaseCard = styled(Box)<CardProps>(
-    space,
-    layout,
-    color,
+    css({
+        width: '100%',
+        height: '180px',
+        color: 'inherit',
+        textDecoration: 'none',
+        position: 'relative'
+    }),
     variant({
         prop: 'kind',
         variants: {
             border: {
-                background: 'white',
                 padding: 5,
-                borderColor: 'grays.3',
+                backgroundColor: 'Mono10',
                 borderWidth: '1px',
-                borderStyle: 'solid',
+                borderStyle: 'transparent',
                 position: 'relative',
-                borderRadius: '4px'
+                ':hover': {
+                    bg: '#fff'
+                }
             },
             shadow: {
                 background: '',
@@ -40,7 +57,6 @@ const BaseCard = styled(Box)<CardProps>(
                 borderWidth: '1px',
                 borderStyle: 'solid',
                 position: 'relative',
-                borderRadius: '4px',
                 boxShadow: '0px 6px 9px 0px #0000001f'
             }
         }

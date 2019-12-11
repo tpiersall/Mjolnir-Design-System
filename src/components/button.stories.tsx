@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './button';
+import { ChevronLeft, ChevronRight, ArrowRight, Trashcan } from './icons'
 //@ts-ignore
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions'
@@ -41,6 +42,12 @@ export const fullWidth = () => (
 
 export const withEnhancer = () => (
     <>
-        <Button startEnhancer={() => <span>sdf</span>} m={2}>Button</Button>
+        <Button kind="primary" endEnhancer={<ArrowRight fill="#fff" />} m={2}>Button</Button>
+    </>
+);
+
+export const shape = () => (
+    <>
+        <Button kind="primary" size="small" m={2}><Trashcan size={10} fill="#fff" /></Button>
     </>
 );
