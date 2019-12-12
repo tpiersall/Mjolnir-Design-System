@@ -32,7 +32,6 @@ export const Card: FC<SharedProps> = (props) => {
 const BaseCard = styled(Box)<CardProps>(
     css({
         width: '100%',
-        height: '180px',
         color: 'inherit',
         textDecoration: 'none',
         position: 'relative'

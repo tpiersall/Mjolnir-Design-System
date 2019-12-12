@@ -81,7 +81,7 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
         border: '2px solid transparent',
         cursor: 'pointer',
         borderRadius: '4px',
-        fontSize: '12px',
+        fontSize: '10px',
         letterSpacing: 1,
         fontWeight: 700,
         textTransform: 'uppercase',
@@ -131,7 +131,7 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
                 pr: 3,
                 pt: 1,
                 pb: 1,
-                fontSize: 0
+                fontSize: "10px"
             },
             large: {
                 pl: 7,

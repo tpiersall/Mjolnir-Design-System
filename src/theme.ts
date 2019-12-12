@@ -166,3 +166,22 @@ export const theme = {
     }
 }
 
+export const ChartTheme = {
+    name: 'dark',
+    gridColor: '#FFFFFF',
+    gridWidth: 1,
+    gridOpacity: 0.75,
+    labelsColor: '#FFFFFF',
+    seriesOpacity: 1,
+    colors: [
+        '#FF7E6B',
+        '#028090',
+        '#FFE74C',
+        '#FF5964',
+        '#93E1D8',
+        '#E15554',
+        '#33CA7F',
+        '#878787',
+    ],
+};
+
