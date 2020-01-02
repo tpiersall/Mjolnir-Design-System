@@ -1,88 +1,62 @@
-import css from '@styled-system/css'
-import { variant, space, layout, compose, color } from 'styled-system'
+import React, { FC } from 'react'
 import styled from 'styled-components'
+import { Text } from './text'
+import { typography, space, color } from 'styled-system'
+import { Box } from './box'
+import css from '@styled-system/css';
+import { action } from '@storybook/addon-actions'
 
 export interface MenuProps {
-    px?: number | string
-    py?: number | string
-    my?: number | string
-    mx?: number | string
-    mt?: number | string
-    ml?: number | string
-    mr?: number | string
-    mb?: number | string
+    numbers?: any
+    items?: any
+    size?: any
 }
 
-const menuStyleProps = compose(
-    space,
-    layout,
-    color
-)
-
-export const Menu = styled('nav')<MenuProps>(
-    css({
-        outline: 'none',
-        margin: '0px',
-        padding: '0px'
-    }),
-    menuStyleProps
-)
-
-export interface MenuItemProps {
-    variant?: string
-    px?: number | string
-    py?: number | string
-    my?: number | string
-    mx?: number | string
-    minHeight?: number | string
+export const Menu: FC<MenuProps> = (props) => {
+    const listItem = (
+        <>
+            {props.items.map((item) =>
+                <ListItemWrapper onClick={() => console.log(item)}>
+                    <Text size={props.size} p={4}>
+                        {item.label}
+                    </Text>
+                </ListItemWrapper>
+            )}
+        </>
+    )
+    return (
+        <BaseMenu>
+            {listItem}
+        </BaseMenu>
+    );
 }
 
-const menuItemStyleProps = compose(
-    space,
-    layout,
-    color
-)
+Menu.defaultProps = {
+    size: 0
+}
 
-export const MenuItem = styled('button')<MenuItemProps>(
+
+const BaseMenu = styled(Box)<MenuProps>(
     css({
-        outline: 'none',
-        cursor: 'pointer',
-        display: 'flex',
-        alignItems: 'center',
-        border: 0,
-        userSelect: 'none',
-        width: '100%',
-        textDecoration: 'none',
+        boxShadow: '0px 6px 9px 0px #0000001f',
+        maxHeight: '200px',
+        overflow: 'scroll',
         position: 'relative',
-        textAlign: 'left',
-        appearance: 'none',
-        listStyleType: 'none',
-        paddingX: 3,
-        paddingY: 1,
+        bg: '#fff',
+        border: '1px solid',
+        borderColor: 'Mono30',
+        borderRadius: '4px'
     }),
-    variant({
-        variants: {
-            normal: {
-                ':hover': {
-                    backgroundColor: 'Mono20',
-                    color: 'Primary'
-                }
-            },
-            active: {
-                ':hover': {
-                    backgroundColor: 'Accent50',
-                    color: '#fff'
-                },
-                ':active': {
-                    backgroundColor: 'Accent50',
-                    color: '#fff'
-                }
-            },
-        }
-    }),
-    menuItemStyleProps
 )
 
-MenuItem.defaultProps = { variant: 'normal' }
-
-
+const ListItemWrapper = styled.div(
+    space,
+    typography,
+    color,
+    css({
+        cursor: 'pointer',
+        '&:hover': {
+            bg: 'Mono20',
+        },
+    })
+)

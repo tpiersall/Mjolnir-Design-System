@@ -1,19 +1,30 @@
 import React from 'react';
-import { Menu } from './menu';
+import { Button } from './button';
+import { PopOver } from './popover'
+import { Menu } from './menu'
+import { ChevronLeft, ChevronRight, ArrowRight, Trashcan } from './icons'
 //@ts-ignore
 import { withInfo } from '@storybook/addon-info';
+import { action } from '@storybook/addon-actions'
+
 
 export default {
-    title: 'Components | Menu',
-    component: Menu,
+    title: 'Components | Popover',
+    component: Button,
     decorators: [withInfo]
 };
 
-export const menu = () => (
+function sayHello() {
+    alert('Hello!');
+}
+
+export const buttons = () => (
     <>
-        <Menu items={items} />
+        <PopOver content={<Menu items={items} size={0} />}><Button onClick={action('clicked')} kind="primary" m={2}>Menu</Button></PopOver>
     </>
 );
+
+
 
 const items = [
     { label: 'Item One' },

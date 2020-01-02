@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { space, color, layout, flexbox, typography, border, position, background, grid } from 'styled-system'
+import { space, color, layout, flexbox, typography, border, position, background, grid, boxShadow } from 'styled-system'
 import { motion } from 'framer-motion'
 
 export interface BoxProps {
@@ -14,13 +14,16 @@ export interface BoxProps {
     backgroundColor?: string
     bg?: string
     p?: string | number
+    borderColor?: string
     border?: string
     borderRight?: string
-    borderColor?: string
+    borderBottom?: string
+    borderTop?: string
+    borderLeft?: string
     borderRadius?: string | number
     boxShadow?: string
     display?: string
-    height?: string | number
+    height?: string | number | object
     maxHeight?: string | number
     minHeight?: string | number
     maxWidth?: string | number
@@ -34,6 +37,7 @@ export interface BoxProps {
     alignItems?: string
     alignContent?: string
     justifyItems?: string
+    justifyContent?: string
     flexWrap?: string
     flexDirection?: string
     flex?: string
@@ -55,6 +59,9 @@ export interface BoxProps {
     my?: number | string
     px?: number | string
     py?: number | string
+    paddingTop?: number | string
+    zIndex?: number
+    css?: any
 
 }
 
@@ -73,5 +80,6 @@ const BoxWrapper = styled(motion.div)<BoxProps>(
     layout,
     flexbox,
     typography,
+    boxShadow,
     border
 )

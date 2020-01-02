@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import { space, variant, color, typography, border } from 'styled-system'
 
 
-
 export interface ButtonProps {
     /** button size */
     size?: string

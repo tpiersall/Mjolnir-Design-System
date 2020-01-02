@@ -18,10 +18,6 @@ export interface CardProps {
 
 type SharedProps = CardProps & BoxProps
 
-const Props: SharedProps = {
-    children: null as React.ReactNode,
-    backgroundImage: "www.google.com"
-}
 
 export const Card: FC<SharedProps> = (props) => {
     return (
@@ -45,9 +41,6 @@ const BaseCard = styled(Box)<CardProps>(
                 borderWidth: '1px',
                 borderStyle: 'transparent',
                 position: 'relative',
-                ':hover': {
-                    bg: '#fff'
-                }
             },
             shadow: {
                 background: '',

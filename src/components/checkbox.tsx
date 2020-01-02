@@ -7,18 +7,21 @@ export interface CheckboxProps {
     iconEnhancer?: object
     labelPosition?: string
     ref?: any
+    onClick?: any
+    checked?: boolean
 }
 
 export const CheckBox: FC<CheckboxProps> = (props) => {
+
     return (
-        <BaseCheckbox ref={props.ref} labelPosition={props.labelPosition}>
+        <BaseCheckbox onClick={props.onClick} ref={props.ref} labelPosition={props.labelPosition}>
             <>
                 {props.iconEnhancer && (
                     <IconEnhancerSpan>{props.iconEnhancer}</IconEnhancerSpan>
                 )}
                 {props.labelPosition === "left" ? <TextWrapper>{props.children}</TextWrapper> : null}
             </>
-            <Input type="checkbox" />
+            <Input type="checkbox" checked={props.checked} />
             <FakeCheckbox>
                 <CheckedIcon
                     width="15"
