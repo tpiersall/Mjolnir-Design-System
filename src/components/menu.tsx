@@ -15,13 +15,13 @@ export interface MenuProps {
 export const Menu: FC<MenuProps> = (props) => {
     const listItem = (
         <>
-            {props.items.map((item) =>
+            {/* {props.items.map((item) =>
                 <ListItemWrapper onClick={() => console.log(item)}>
                     <Text size={props.size} p={4}>
                         {item.label}
                     </Text>
                 </ListItemWrapper>
-            )}
+            )} */}
         </>
     )
     return (

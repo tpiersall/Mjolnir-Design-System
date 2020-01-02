@@ -83,6 +83,6 @@ export const SideMenuItem = styled('button')<SideMenuItemProps>(
     menuItemStyleProps
 )
 
-SideMenu.defaultProps = { variant: 'normal' }
+
 
 
