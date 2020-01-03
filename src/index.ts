@@ -16,5 +16,6 @@ export { Text } from './components/text'
 export { Icon } from './components/icons'
 export { TextInput } from './components/textInput'
 export { PopOver } from './components/popover'
+export { Slider } from './components/slider'
 
 export { theme } from './theme'

@@ -11,12 +11,15 @@ export interface InputProps {
     error?: boolean
     for?: any
     errorMessage?: string
+    value?: number
+    onChange?: any
+    type?: any
 }
 
 export const TextInput: FC<InputProps> = (props) => {
     return (
         <>
-            <BaseInput error={props.error} placeholder={props.placeholder} id={props.id} />
+            <BaseInput error={props.error} placeholder={props.placeholder} id={props.id} value={props.value} onChange={props.onChange} type={props.type} />
             {props.error && <Text size={0} fontWeight={500} color="Red40">{props.errorMessage}</Text>}
         </>
     )
