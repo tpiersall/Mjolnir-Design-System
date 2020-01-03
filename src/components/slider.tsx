@@ -12,6 +12,8 @@ import { TextInput } from './textInput'
 export interface ISliderProps {
     value?: number
     onChange: any
+    min?: number
+    max?: number
 }
 
 
@@ -19,7 +21,7 @@ export const Slider: FC<ISliderProps> = (props) => {
     return (
         <BaseSlider>
             <Text size={0}>0</Text>
-            <input type="range" className="slider" value={props.value} onChange={props.onChange} />
+            <input type="range" className="slider" value={props.value} onChange={props.onChange} min={props.min} max={props.max} />
             <Text size={0}>100</Text>
         </BaseSlider>
 
