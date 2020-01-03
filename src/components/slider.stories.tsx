@@ -16,7 +16,6 @@ export default {
 
 export const sliderx = () => (
 
-
     <Slider />
 
 
