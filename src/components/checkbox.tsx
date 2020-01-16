@@ -48,6 +48,7 @@ const BaseCheckbox = styled('label')<CheckboxProps>(
         position: 'relative',
         display: 'inline-flex',
         alignItems: 'center',
+        justifyContent: 'space-between',
         width: '100%'
     }
 
