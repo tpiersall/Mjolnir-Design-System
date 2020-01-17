@@ -95,6 +95,9 @@ const FakeCheckbox = styled('div')<CheckboxProps>(
         },
         [`${Input}:focus + &`]: {
             borderColor: 'primary',
+            outline: '2px solid',
+            outlineOffset: '-2px',
+            outlineColor: 'black',
         },
         [`${Input}:checked + &`]: {
             backgroundColor: 'primary',

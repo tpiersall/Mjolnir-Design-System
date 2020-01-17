@@ -85,7 +85,6 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
         fontWeight: 700,
         textTransform: 'uppercase',
         transition: '.2s',
-
     }),
     variant({
         prop: 'kind',
