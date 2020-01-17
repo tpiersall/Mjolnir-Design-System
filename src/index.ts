@@ -18,5 +18,6 @@ export { Icon, ChevronLeft, ChevronRight, ArrowLeft, ArrowRight, StoresIcon, Act
 export { TextInput } from './components/textInput'
 export { PopOver } from './components/popover'
 export { Slider } from './components/slider'
+export { Accordion } from './components/accordion'
 
 export { theme } from './theme'

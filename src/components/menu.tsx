@@ -10,13 +10,15 @@ export interface MenuProps {
     numbers?: any
     items?: any
     size?: any
+    item?: any
 }
 
 export const Menu: FC<MenuProps> = (props) => {
+
     const listItem = (
         <>
             {/* {props.items.map((item) =>
-                <ListItemWrapper onClick={() => console.log(item)}>
+                <ListItemWrapper>
                     <Text size={props.size} p={4}>
                         {item.label}
                     </Text>

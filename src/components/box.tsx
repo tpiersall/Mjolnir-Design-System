@@ -55,6 +55,10 @@ export interface BoxProps {
     backgroundRepeat?: string
     gridColum?: string
     gridRow?: string
+    mb?: number | string
+    mt?: number | string
+    ml?: number | string
+    mr?: number | string
     mx?: number | string
     my?: number | string
     px?: number | string
@@ -62,6 +66,8 @@ export interface BoxProps {
     paddingTop?: number | string
     zIndex?: number
     css?: any
+    onClick?: any
+    style?: any
 
 }
 

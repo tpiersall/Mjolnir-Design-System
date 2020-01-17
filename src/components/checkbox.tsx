@@ -48,7 +48,6 @@ const BaseCheckbox = styled('label')<CheckboxProps>(
         position: 'relative',
         display: 'inline-flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
         width: '100%'
     }
 
@@ -74,6 +73,7 @@ const TextWrapper = styled('div')(
         marginLeft: 1,
         marginRight: 3,
         verticalAlign: 'middle',
+        flexGrow: 1
     })
 );
 
