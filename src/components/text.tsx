@@ -21,6 +21,7 @@ export interface TextProps {
     pb?: string | number
     pl?: string | number
     pr?: string | number
+    style?: any
 }
 
 export const Text: React.FC<TextProps> = (props) => (
@@ -33,6 +34,10 @@ export const Text: React.FC<TextProps> = (props) => (
         truncate={props.truncate}
     />
 )
+
+Text.defaultProps = {
+    size: 2
+}
 
 const TextWrapper = styled('div')<TextProps>(
     space,
@@ -48,7 +53,7 @@ const TextWrapper = styled('div')<TextProps>(
         prop: 'size',
         variants: {
             0: {
-                fontSize: 1
+                fontSize: 0
             },
             1: {
                 fontSize: 1,

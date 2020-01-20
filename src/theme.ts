@@ -4,6 +4,7 @@ export const theme = {
         mono: 'Inconsolata, monospace;'
     },
     fontSizes: [
+        '10px',
         '12px',
         '14px',
         '16px',

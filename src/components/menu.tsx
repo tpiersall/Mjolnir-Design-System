@@ -17,13 +17,13 @@ export const Menu: FC<MenuProps> = (props) => {
 
     const listItem = (
         <>
-            {/* {props.items.map((item) =>
+            {props.items.map((item) =>
                 <ListItemWrapper>
                     <Text size={props.size} p={4}>
                         {item.label}
                     </Text>
                 </ListItemWrapper>
-            )} */}
+            )}
         </>
     )
     return (
@@ -31,10 +31,6 @@ export const Menu: FC<MenuProps> = (props) => {
             {listItem}
         </BaseMenu>
     );
-}
-
-Menu.defaultProps = {
-    size: 0
 }
 
 

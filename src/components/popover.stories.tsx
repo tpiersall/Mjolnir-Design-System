@@ -20,7 +20,7 @@ function sayHello() {
 
 export const buttons = () => (
     <>
-        <PopOver content={<Menu items={items} size={0} />}><Button onClick={action('clicked')} kind="primary" m={2}>Menu</Button></PopOver>
+        <PopOver content={<Menu items={items} />}><Button onClick={action('clicked')} kind="primary" m={2}>Menu</Button></PopOver>
     </>
 );
 

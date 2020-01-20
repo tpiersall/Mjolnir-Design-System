@@ -5,6 +5,7 @@ import { Text } from './text'
 import { ChevronRight } from './icons'
 import css from '@styled-system/css'
 import { space, variant, color, typography, border } from 'styled-system'
+import { theme } from '../theme'
 
 export interface AccordionProps {
     open?: boolean
@@ -12,7 +13,6 @@ export interface AccordionProps {
     titleSize?: any
     fontWeight?: any
     children: any
-    size: any
     ml?: any
 
 }
@@ -33,10 +33,10 @@ export const Accordion: FC<AccordionProps> = (props) => {
                     {props.title}
                 </Text>
                 {open ? (
-                    <div style={{ marginLeft: "auto", transform: 'rotate(-90deg)', transition: '.1s'  }}>
+                    <div style={{ marginLeft: "auto", transform: 'rotate(-90deg)', transition: '.1s' }}>
                         <ChevronRight />
                     </div>
-                ) : <div style={{ marginLeft: "auto", transform: 'rotate(90deg)', transition: '.1s'  }}>
+                ) : <div style={{ marginLeft: "auto", transform: 'rotate(90deg)', transition: '.1s' }}>
                         <ChevronRight />
                     </div>
 
@@ -51,14 +51,15 @@ export const Accordion: FC<AccordionProps> = (props) => {
 
 Accordion.defaultProps = {
     fontWeight: 500,
-    size: 1
 }
 
 
 const AccordionTrigger = styled('button')(
     css({
         bg: 'Mono10',
-        outline: '2px solid transparent',
+        outlineWidth: '2px',
+        outlineStyle: 'solid',
+        outlineColor: 'transparent',
         border: 'none',
         display: 'flex',
         alignItems: 'center',
@@ -66,14 +67,13 @@ const AccordionTrigger = styled('button')(
         cursor: 'pointer',
         width: '100%',
         '&:focus': {
-            outline: '2px solid',
+            outlineStyle: 'solid',
             outlineOffset: '-2px',
-            outlineColor: 'black',
+            outlineColor: `${theme.colors.primary}`,
         },
     }),
 
 )
 
 const AccordionPanel = styled(Box)({})
-
 

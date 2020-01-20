@@ -12,10 +12,6 @@ export default {
     decorators: [withInfo]
 };
 
-function sayHello() {
-    alert('Hello!');
-}
-
 export const checkbox = () => (
     <div>
         <CheckBox labelPosition="right">BuxtonCo</CheckBox>

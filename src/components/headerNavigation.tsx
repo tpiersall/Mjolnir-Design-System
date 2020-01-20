@@ -34,7 +34,7 @@ export const HeaderNavigation: FC<SharedProps> = (props) => {
         >
             {props.children}
             {props.hasMenu && (
-                <PopOver alignment="right" content={<Menu items={items} size={0} />}><Button>Menu</Button></PopOver>
+                <PopOver alignment="right" content={<Menu items={items} size={2} />}><Button>Menu</Button></PopOver>
             )}
 
         </BaseHeaderNavigation>

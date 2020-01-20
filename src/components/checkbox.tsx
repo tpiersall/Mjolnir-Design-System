@@ -46,7 +46,7 @@ CheckBox.defaultProps = {
 const BaseCheckbox = styled('label')<CheckboxProps>(
     {
         position: 'relative',
-        display: 'inline-flex',
+        display: 'flex',
         alignItems: 'center',
         width: '100%'
     }

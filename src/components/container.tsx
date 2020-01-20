@@ -29,7 +29,7 @@ const BaseContainer = styled(`section`)<ContainerProps>(
                 maxWidth: '25rem'
             },
             medium: {
-                maxWidth: '45rem'
+                maxWidth: '40rem'
             },
             large: {
                 maxWidth: '65rem'
