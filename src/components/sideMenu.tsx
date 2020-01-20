@@ -1,6 +1,7 @@
 import css from '@styled-system/css'
 import { variant, space, layout, compose, color } from 'styled-system'
 import styled from 'styled-components'
+import { theme } from '../theme'
 
 export interface SideMenuProps {
     px?: number | string
@@ -23,7 +24,7 @@ export const SideMenu = styled('nav')<SideMenuProps>(
     css({
         outline: 'none',
         margin: '0px',
-        padding: '0px'
+        padding: '0px',
     }),
     menuStyleProps
 )
@@ -45,7 +46,6 @@ const menuItemStyleProps = compose(
 
 export const SideMenuItem = styled('button')<SideMenuItemProps>(
     css({
-        outline: 'none',
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
@@ -53,28 +53,29 @@ export const SideMenuItem = styled('button')<SideMenuItemProps>(
         userSelect: 'none',
         width: '100%',
         textDecoration: 'none',
+        outlineStyle: 'solid',
+        outlineOffset: '-1px',
+        outlineColor: 'transparent',
         position: 'relative',
         textAlign: 'left',
         appearance: 'none',
         listStyleType: 'none',
         paddingX: 3,
-        paddingY: 1,
+        paddingY: 1
     }),
     variant({
         variants: {
             normal: {
-                ':hover': {
+                '&:hover': {
                     backgroundColor: 'Mono20',
                     color: 'Primary'
                 }
             },
             active: {
-                ':hover': {
-                    backgroundColor: 'Accent50',
-                    color: '#fff'
-                },
-                ':active': {
-                    backgroundColor: 'Accent50',
+                backgroundColor: 'primary',
+                color: '#fff',
+                '&:active': {
+                    backgroundColor: 'primary',
                     color: '#fff'
                 }
             },

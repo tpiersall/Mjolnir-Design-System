@@ -24,7 +24,7 @@ export const sideMenu = () => (
         <Divider mt={4} />
         <SideMenu>
             <Heading size={1} fontWeight={500} my={5} mx={5}>Components</Heading>
-            <SideMenuItem variant="normal" px={10} minHeight={12}><Text as="span" size={2}>Buttons</Text></SideMenuItem>
+            <SideMenuItem variant="active" px={10} minHeight={12}><Text as="span" size={2}>Buttons</Text></SideMenuItem>
             <SideMenuItem variant="normal" px={10} minHeight={12}><Text size={2} as="span" >Inputs</Text></SideMenuItem>
         </SideMenu>
     </>

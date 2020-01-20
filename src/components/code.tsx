@@ -20,7 +20,7 @@ const CodeBase = styled('span')<CodeProps>(
     css({
         fontWeight: 600,
         fontFamily: 'mono',
-        fontSize: 1,
+        fontSize: 2,
         lineHeight: "20px",
         paddingX: 2,
         paddingY: 0,
