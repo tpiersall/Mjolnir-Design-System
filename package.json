@@ -1,6 +1,6 @@
 {
   "name": "mjolnir-design-system",
-  "version": "0.1.68",
+  "version": "0.1.69",
   "private": false,
   "dependencies": {
     "@amcharts/amcharts4": "^4.7.11",
