@@ -7,10 +7,10 @@ export interface BoxProps {
     children?: ReactNode
     position?: string
     color?: string
-    top?: number
-    left?: number
-    right?: number
-    bottom?: number
+    top?: number | string
+    left?: number | string
+    right?: number | string
+    bottom?: number | string
     backgroundColor?: string
     bg?: string
     p?: string | number

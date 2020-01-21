@@ -34,7 +34,7 @@ export const Menu: FC<MenuProps> = (props) => {
 }
 
 
-const BaseMenu = styled(Box)<MenuProps>(
+export const BaseMenu = styled(Box)<MenuProps>(
     css({
         boxShadow: '0px 6px 9px 0px #0000001f',
         maxHeight: '200px',
@@ -47,7 +47,7 @@ const BaseMenu = styled(Box)<MenuProps>(
     }),
 )
 
-const ListItemWrapper = styled.div(
+export const ListItemWrapper = styled.div(
     space,
     typography,
     color,

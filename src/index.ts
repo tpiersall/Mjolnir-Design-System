@@ -20,5 +20,6 @@ export { PopOver } from './components/popover'
 export { Slider } from './components/slider'
 export { Accordion } from './components/accordion'
 export { Link } from './components/link'
+export { Select } from './components/select'
 
 export { theme } from './theme'
