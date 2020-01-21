@@ -42,7 +42,7 @@ export const Select: FC<SelectProps> = (props) => {
         }
     });
     return (
-        <>
+        <Box position='relative' width="100%">
             <div {...getComboboxProps()}>
                 <Box
                     {...getToggleButtonProps()}
@@ -83,7 +83,7 @@ export const Select: FC<SelectProps> = (props) => {
                 }
             </AnimatePresence>
 
-        </>
+        </Box>
     )
 }
 
@@ -124,7 +124,7 @@ export const BaseMenu = styled(motion.ul)(
         width: '100%',
         padding: '0px',
         margin: '0px',
-        zIndex: 99999
+        zIndex: 9999
     }),
 )
 

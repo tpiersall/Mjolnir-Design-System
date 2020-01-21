@@ -18,11 +18,11 @@ export default {
 export const inputs = () => {
     return (
         <form>
-            <Text size={0} mt={6}><label for="input">Label</label></Text>
+            <Text size={0} mt={6}><label htmlFor="input">Label</label></Text>
             <TextInput id="input" error errorMessage="houasdfasdfasdfsdfm" placeholder="this is a placeholder..." />
-            <Text size={0} mt={6}><label for="input2">Label</label></Text>
+            <Text size={0} mt={6}><label htmlFor="input2">Label</label></Text>
             <TextInput id="input2" placeholder="this is a placeholder..." />
-            <Text size={0} mt={6}><label for="input2">Label</label></Text>
+            <Text size={0} mt={6}><label htmlFor="input2">Label</label></Text>
             <Select items={items} />
             <Button mt={6} kind="primary">Submit</Button>
         </form>
