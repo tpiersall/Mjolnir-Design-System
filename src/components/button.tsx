@@ -80,6 +80,7 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
         border: '2px solid transparent',
         cursor: 'pointer',
         borderRadius: '4px',
+        fontFamily: 'normal',
         fontSize: '10px',
         letterSpacing: 1,
         fontWeight: 700,
@@ -96,7 +97,7 @@ const ButtonWrapper = styled(motion.button)<ButtonProps>(
                 '&:hover': {
                     bg: 'primary10',
                     color: '#fff'
-                },
+                }
             },
             secondary: {
                 color: 'primary',

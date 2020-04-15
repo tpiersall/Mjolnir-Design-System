@@ -20,18 +20,19 @@ export interface ISliderProps {
 export const Slider: FC<ISliderProps> = (props) => {
     return (
         <BaseSlider>
-            <Text size={0}>0</Text>
+            <Text size={0}>{props.min}</Text>
             <input type="range" className="slider" value={props.value} onChange={props.onChange} min={props.min} max={props.max} />
-            <Text size={0}>100</Text>
+            <Text size={0}>{props.max}</Text>
         </BaseSlider>
 
     )
 }
 
 Slider.defaultProps = {
-    value: 50
+    value: 50,
+    min: 0,
+    max: 100
 }
-
 
 const BaseSlider = styled.div`
     width: 100%; 

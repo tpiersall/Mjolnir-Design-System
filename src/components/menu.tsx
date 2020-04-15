@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Text } from './text'
 import { typography, space, color } from 'styled-system'
+import { Manager, Reference, Popper } from 'react-popper'
 import { Box } from './box'
 import css from '@styled-system/css';
 import { action } from '@storybook/addon-actions'

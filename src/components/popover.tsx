@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { variant } from 'styled-system'
+import { Manager, Reference, Popper } from 'react-popper';
 import { motion, AnimatePresence } from 'framer-motion'
 import css from '@styled-system/css';
 
@@ -22,20 +23,31 @@ export const PopOver: FC<PopoverProps> = (props) => {
 
 
     return (
-        <BasePopOver {...props} onTap={toggle}>
-            <>
-                {props.children}
-                {open && (
-                    <div>
-                        <Content alignment={props.alignment}>
-                            {props.content}
-                        </Content>
-                    </div>
-                )
-                }
+        <Manager>
+            <BasePopOver {...props} onTap={toggle}>
+                <>
+                    {props.children}
+                    <AnimatePresence
+                    >
+                        {open && (
+                            <div>
+                                <Content
+                                    initial={{ y: -10 }}
+                                    animate={{ y: 0 }}
+                                    exit={{ display: 'none' }}
+                                    transition={{ ease: "easeOut", duration: .2 }}
+                                    alignment={props.alignment}
+                                >
+                                    {props.content}
+                                </Content>
+                            </div>
+                        )
+                        }
+                    </AnimatePresence>
 
-            </>
-        </BasePopOver >
+                </>
+            </BasePopOver >
+        </Manager>
     )
 }
 

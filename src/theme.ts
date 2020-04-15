@@ -1,6 +1,6 @@
 export const theme = {
     fonts: {
-        normal: 'Graphik, -apple-system, BlinkMacSystemFont, "Helvetica Neue", helvetica, arial, sans-serif',
+        normal: 'Avenir, -apple-system, BlinkMacSystemFont, "Helvetica Neue", helvetica, arial, sans-serif',
         mono: 'Inconsolata, monospace;'
     },
     fontSizes: [
