@@ -14,12 +14,14 @@ export default {
 
 
 export const SelectComponent = () => {
+
     return (
         <Select
             items={items}
         />
     )
 };
+
 
 const items = [
     "Neptunium",

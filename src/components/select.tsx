@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react'
 import styled from 'styled-components'
 import { useCombobox } from "downshift"
 import { ChevronRight } from './icons'
+import { ChevronDown } from 'react-feather'
 import { Box } from './box'
 import { Text } from './text'
 import { typography, space, color } from 'styled-system'
@@ -51,11 +52,10 @@ export const Select: FC<SelectProps> = (props) => {
                     <BaseInput {...getInputProps()}></BaseInput>
                     <Box
                         position="absolute"
-                        right='10px'
-                        top='10px'
-                        style={{ transform: 'rotate(90deg)' }}
+                        right='14px'
+                        top='12px'
                     >
-                        <ChevronRight />
+                        <ChevronDown size="20px" />
                     </Box>
                 </Box>
             </div>
@@ -105,7 +105,8 @@ const BaseInput = styled('input')<SelectProps>(
         ':focus': {
             borderColor: 'primary',
             borderWidth: '2px',
-            boxShadow: `0px 4px 8px 0px #0000001a`
+            boxShadow: `0px 4px 8px 0px #0000001a`,
+
         },
     }),
 )
