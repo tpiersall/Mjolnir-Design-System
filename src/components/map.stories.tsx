@@ -19,7 +19,7 @@ export default {
 
 
 
-export const map = () => {
+export const Mapz = () => {
     const [on, setOn] = React.useState(true)
 
     const sources = {

@@ -22,6 +22,15 @@ export const SelectComponent = () => {
     )
 };
 
+// export const select = () => {
+
+//     return (
+//         <SearchSelect
+//             items={items}
+//         />
+//     )
+// };
+
 
 const items = [
     "Neptunium",

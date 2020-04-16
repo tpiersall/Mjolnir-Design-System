@@ -1,8 +1,9 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState, useRef } from 'react'
 import styled from 'styled-components'
-import { useCombobox } from "downshift"
+import { useCombobox, useSelect } from "downshift"
 import { ChevronRight } from './icons'
-import { ChevronDown } from 'react-feather'
+import { ChevronDown, Search } from 'react-feather'
+import { Button } from '../components/button'
 import { Box } from './box'
 import { Text } from './text'
 import { typography, space, color } from 'styled-system'
@@ -10,12 +11,77 @@ import css from '@styled-system/css';
 import { AnimatePresence, motion } from 'framer-motion'
 
 
+
+
 export interface SelectProps {
+    items: any
+    inputValue?: string
+    selectedItem: string
+    selectTitle?: string
+}
+
+export interface SearchSelectProps {
     items: any
     inputValue?: string
 }
 
-export const Select: FC<SelectProps> = (props) => {
+export const Select: FC<SelectProps> = ({ items, ...props }) => {
+
+    const ref = useRef
+
+    const {
+        isOpen,
+        selectedItem,
+        getToggleButtonProps,
+        getLabelProps,
+        getMenuProps,
+        highlightedIndex,
+        getItemProps,
+    } = useSelect({ items })
+    return (
+        <Box position="relative">
+            <BaseContainer {...getToggleButtonProps()}>
+                {selectedItem || <Text>{props.selectTitle}</Text>}
+                <Box
+                    position="absolute"
+                    right='14px'
+                    top='12px'
+                >
+                    <ChevronDown size="20px" />
+                </Box>
+            </BaseContainer>
+            <AnimatePresence>
+                {isOpen &&
+                    <BaseMenu
+                        {...getMenuProps()}
+                        initial={{ y: -10 }}
+                        animate={{ y: 0 }}
+                        exit={{ display: 'none' }}
+                        transition={{ ease: "easeOut", duration: .2 }}
+                    >
+                        {isOpen &&
+                            items.map((item, index) => (
+                                <ListItemWrapper
+                                    key={`${item}${index}`}
+                                    {...getItemProps({ item, index })}
+                                >
+                                    <Text size={2} p={4}>
+                                        {item}
+                                    </Text >
+                                </ListItemWrapper>
+                            ))}
+                    </BaseMenu>
+                }
+            </AnimatePresence>
+        </Box>
+    )
+}
+
+Select.defaultProps = {
+    selectTitle: "Select One"
+}
+
+export const SearchSelect: FC<SearchSelectProps> = (props) => {
     const [inputItems, setInputItems] = useState(props.items)
 
     const handleClose = () => {
@@ -55,7 +121,7 @@ export const Select: FC<SelectProps> = (props) => {
                         right='14px'
                         top='12px'
                     >
-                        <ChevronDown size="20px" />
+                        <Search size="20px" />
                     </Box>
                 </Box>
             </div>
@@ -87,11 +153,26 @@ export const Select: FC<SelectProps> = (props) => {
     )
 }
 
-Select.defaultProps = {
+SearchSelect.defaultProps = {
 
 }
 
-const BaseInput = styled('input')<SelectProps>(
+const BaseContainer = styled('div')<SelectProps>(
+    css({
+        position: 'relative',
+        borderOffset: '-2px',
+        borderWidth: '2px',
+        borderStyle: 'solid',
+        borderColor: "Mono30",
+        outline: 'none',
+        padding: 4,
+        fontSize: 2,
+        width: '100%',
+        transition: '.2s',
+    }),
+)
+
+const BaseInput = styled('input')<SearchSelectProps>(
     css({
         borderOffset: '-2px',
         borderWidth: '2px',
