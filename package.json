@@ -4,6 +4,7 @@
   "private": false,
   "dependencies": {
     "@amcharts/amcharts4": "^4.7.11",
+    "@mapbox/geo-viewport": "^0.4.0",
     "@styled-system/css": "^5.0.23",
     "downshift": "^4.0.7",
     "framer-motion": "^1.6.17",
