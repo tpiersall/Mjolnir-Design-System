@@ -17,7 +17,7 @@ export const SelectComponent = () => {
 
     return (
         <Select
-            items={items}
+
         />
     )
 };
@@ -32,33 +32,33 @@ export const SelectComponent = () => {
 // };
 
 
-const items = [
-    "Neptunium",
-    "Plutonium",
-    "Americium",
-    "Curium",
-    "Berkelium",
-    "Californium",
-    "Einsteinium",
-    "Fermium",
-    "Mendelevium",
-    "Nobelium",
-    "Lawrencium",
-    "Rutherfordium",
-    "Dubnium",
-    "Seaborgium",
-    "Bohrium",
-    "Hassium",
-    "Meitnerium",
-    "Darmstadtium",
-    "Roentgenium",
-    "Copernicium",
-    "Nihonium",
-    "Flerovium",
-    "Moscovium",
-    "Livermorium",
-    "Tennessine",
-    "Oganesson"
-];
+// const items = [
+//     "Neptunium",
+//     "Plutonium",
+//     "Americium",
+//     "Curium",
+//     "Berkelium",
+//     "Californium",
+//     "Einsteinium",
+//     "Fermium",
+//     "Mendelevium",
+//     "Nobelium",
+//     "Lawrencium",
+//     "Rutherfordium",
+//     "Dubnium",
+//     "Seaborgium",
+//     "Bohrium",
+//     "Hassium",
+//     "Meitnerium",
+//     "Darmstadtium",
+//     "Roentgenium",
+//     "Copernicium",
+//     "Nihonium",
+//     "Flerovium",
+//     "Moscovium",
+//     "Livermorium",
+//     "Tennessine",
+//     "Oganesson"
+// ];
 
 

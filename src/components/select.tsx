@@ -27,8 +27,6 @@ export interface SearchSelectProps {
 
 export const Select: FC<SelectProps> = ({ items, ...props }) => {
 
-    const ref = useRef
-
     const {
         isOpen,
         selectedItem,
@@ -78,15 +76,12 @@ export const Select: FC<SelectProps> = ({ items, ...props }) => {
 }
 
 Select.defaultProps = {
-    selectTitle: "Select One"
+    selectTitle: "Select One",
+    items: []
 }
 
 export const SearchSelect: FC<SearchSelectProps> = (props) => {
     const [inputItems, setInputItems] = useState(props.items)
-
-    const handleClose = () => {
-        setInputItems([])
-    }
 
     const {
         isOpen,
@@ -154,7 +149,7 @@ export const SearchSelect: FC<SearchSelectProps> = (props) => {
 }
 
 SearchSelect.defaultProps = {
-
+    items: []
 }
 
 const BaseContainer = styled('div')<SelectProps>(
