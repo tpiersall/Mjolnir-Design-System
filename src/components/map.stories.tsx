@@ -65,6 +65,7 @@ export const Mapz = () => {
     return (
         <div style={{ width: '100vw', height: '100vh' }}>
             <Map
+                mapStyle="mapbox/streets-v11"
                 sources={sources}
                 layers={layers}
                 center={[-124.03564453125, 46.195042108660154]}

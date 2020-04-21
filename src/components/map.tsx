@@ -15,6 +15,7 @@ export const Map = ({
     bounds,
     padding,
     styles,
+    mapStyle,
     sources,
     layers,
     minZoom,
@@ -34,7 +35,7 @@ export const Map = ({
 
         const map = new mapboxgl.Map({
             container: mapNode.current,
-            style: "mapbox://styles/tpiersa/ck726obkv0f7x1io5uba4cggs",
+            style: `mapbox://styles/${mapStyle}`,
             center: center,
             zoom: zoom
         })
