@@ -14,7 +14,7 @@ export interface CheckboxProps {
 export const CheckBox: FC<CheckboxProps> = (props) => {
 
     return (
-        <BaseCheckbox onClick={props.onClick} ref={props.ref} labelPosition={props.labelPosition}>
+        <BaseCheckbox {...props} onClick={props.onClick} ref={props.ref} labelPosition={props.labelPosition}>
             <>
                 {props.iconEnhancer && (
                     <IconEnhancerSpan>{props.iconEnhancer}</IconEnhancerSpan>
