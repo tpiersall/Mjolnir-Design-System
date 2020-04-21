@@ -14,7 +14,8 @@ export default {
 
 export const checkbox = () => (
     <div>
-        <CheckBox labelPosition="right">BuxtonCo</CheckBox>
+        <CheckBox mb={5} labelPosition="right">Buxtonco</CheckBox>
+        <CheckBox mb={5} labelPosition="right">Buxtonco</CheckBox>
     </div>
 );
 

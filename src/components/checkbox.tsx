@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
-import { variant } from 'styled-system'
+import { variant, space } from 'styled-system'
 
 export interface CheckboxProps {
     iconEnhancer?: object
@@ -9,6 +9,15 @@ export interface CheckboxProps {
     ref?: any
     onClick?: any
     checked?: boolean
+    mb?: number | string
+    mt?: number | string
+    ml?: number | string
+    mr?: number | string
+    mx?: number | string
+    my?: number | string
+    px?: number | string
+    py?: number | string
+
 }
 
 export const CheckBox: FC<CheckboxProps> = (props) => {
@@ -44,6 +53,7 @@ CheckBox.defaultProps = {
 }
 
 const BaseCheckbox = styled('label')<CheckboxProps>(
+    space,
     {
         position: 'relative',
         display: 'flex',
