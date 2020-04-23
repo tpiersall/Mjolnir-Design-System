@@ -23,6 +23,7 @@ export interface SelectProps {
 export interface SearchSelectProps {
     items: any
     inputValue?: string
+    placeholder?: string
 }
 
 export const Select: FC<SelectProps> = ({ items, ...props }) => {
@@ -37,9 +38,9 @@ export const Select: FC<SelectProps> = ({ items, ...props }) => {
         getItemProps,
     } = useSelect({ items })
     return (
-        <Box position="relative">
+        <Box {...props} position="relative" width="100%">
             <BaseContainer {...getToggleButtonProps()}>
-                {selectedItem || <Text>{props.selectTitle}</Text>}
+                {selectedItem || props.selectTitle}
                 <Box
                     position="absolute"
                     right='14px'
@@ -65,7 +66,7 @@ export const Select: FC<SelectProps> = ({ items, ...props }) => {
                                 >
                                     <Text size={2} p={4}>
                                         {item}
-                                    </Text >
+                                    </Text>
                                 </ListItemWrapper>
                             ))}
                     </BaseMenu>
@@ -104,13 +105,13 @@ export const SearchSelect: FC<SearchSelectProps> = (props) => {
         }
     });
     return (
-        <Box position='relative' width="100%">
-            <div {...getComboboxProps()}>
+        <Box {...props} position='relative' width="100%">
+            <Box {...getComboboxProps()}>
                 <Box
                     {...getToggleButtonProps()}
                     position="relative"
                 >
-                    <BaseInput {...getInputProps()}></BaseInput>
+                    <BaseInput placeholder={props.placeholder} {...getInputProps()}></BaseInput>
                     <Box
                         position="absolute"
                         right='14px'
@@ -119,7 +120,7 @@ export const SearchSelect: FC<SearchSelectProps> = (props) => {
                         <Search size="20px" />
                     </Box>
                 </Box>
-            </div>
+            </Box>
             <AnimatePresence>
                 {isOpen &&
                     <BaseMenu
@@ -137,7 +138,7 @@ export const SearchSelect: FC<SearchSelectProps> = (props) => {
                                 >
                                     <Text size={2} p={4}>
                                         {item}
-                                    </Text >
+                                    </Text>
                                 </ListItemWrapper>
                             ))}
                     </BaseMenu>
@@ -149,21 +150,27 @@ export const SearchSelect: FC<SearchSelectProps> = (props) => {
 }
 
 SearchSelect.defaultProps = {
-    items: []
+    items: [],
+    placeholder: 'Search...'
 }
 
 const BaseContainer = styled('div')<SelectProps>(
     css({
-        position: 'relative',
         borderOffset: '-2px',
         borderWidth: '2px',
         borderStyle: 'solid',
         borderColor: "Mono30",
         outline: 'none',
-        padding: 4,
+        padding: '9px',
         fontSize: 2,
         width: '100%',
         transition: '.2s',
+        ':focus': {
+            borderColor: 'primary',
+            borderWidth: '2px',
+            boxShadow: `0px 4px 8px 0px #0000001a`,
+
+        },
     }),
 )
 

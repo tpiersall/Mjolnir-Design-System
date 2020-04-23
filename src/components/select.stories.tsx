@@ -1,5 +1,6 @@
 import React from 'react'
-import { Select } from './select'
+import { Select, SearchSelect } from './select'
+import { Box } from '../components/box'
 
 //@ts-ignore
 import { withInfo } from '@storybook/addon-info';
@@ -16,9 +17,10 @@ export default {
 export const SelectComponent = () => {
 
     return (
-        <Select
-
-        />
+        <Box display="flex">
+            <Select mr={3} items={items} />
+            <SearchSelect items={items} />
+        </Box>
     )
 };
 
@@ -32,33 +34,33 @@ export const SelectComponent = () => {
 // };
 
 
-// const items = [
-//     "Neptunium",
-//     "Plutonium",
-//     "Americium",
-//     "Curium",
-//     "Berkelium",
-//     "Californium",
-//     "Einsteinium",
-//     "Fermium",
-//     "Mendelevium",
-//     "Nobelium",
-//     "Lawrencium",
-//     "Rutherfordium",
-//     "Dubnium",
-//     "Seaborgium",
-//     "Bohrium",
-//     "Hassium",
-//     "Meitnerium",
-//     "Darmstadtium",
-//     "Roentgenium",
-//     "Copernicium",
-//     "Nihonium",
-//     "Flerovium",
-//     "Moscovium",
-//     "Livermorium",
-//     "Tennessine",
-//     "Oganesson"
-// ];
+const items = [
+    "Neptunium",
+    "Plutonium",
+    "Americium",
+    "Curium",
+    "Berkelium",
+    "Californium",
+    "Einsteinium",
+    "Fermium",
+    "Mendelevium",
+    "Nobelium",
+    "Lawrencium",
+    "Rutherfordium",
+    "Dubnium",
+    "Seaborgium",
+    "Bohrium",
+    "Hassium",
+    "Meitnerium",
+    "Darmstadtium",
+    "Roentgenium",
+    "Copernicium",
+    "Nihonium",
+    "Flerovium",
+    "Moscovium",
+    "Livermorium",
+    "Tennessine",
+    "Oganesson"
+];
 
 
