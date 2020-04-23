@@ -47,7 +47,7 @@ const TextWrapper = styled('div')<TextProps>(
     css({
         fontSize: 'inherit',
         fontFamily: 'normal',
-        lineHeight: 1.4
+
     }),
     variant({
         prop: 'size',
