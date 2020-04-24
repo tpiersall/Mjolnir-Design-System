@@ -37,6 +37,7 @@ export const Select: FC<SelectProps> = ({ items, ...props }) => {
         highlightedIndex,
         getItemProps,
     } = useSelect({ items })
+
     return (
         <Box {...props} position="relative" width="100%">
             <BaseContainer {...getToggleButtonProps()}>
@@ -163,6 +164,7 @@ const BaseContainer = styled('div')<SelectProps>(
         outline: 'none',
         padding: '9px',
         fontSize: 2,
+        fontWeight: 700,
         width: '100%',
         transition: '.2s',
         ':focus': {
@@ -180,6 +182,7 @@ const BaseInput = styled('input')<SearchSelectProps>(
         borderWidth: '2px',
         borderStyle: 'solid',
         borderColor: "Mono30",
+        fontWeight: 700,
         outline: 'none',
         padding: 4,
         fontSize: 2,
